@@ -1,6 +1,6 @@
-// pages/fotos.js
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Navbar from '../components/Navbar'; // Importiere die Navbar-Komponente
 import styles from '../styles/Fotos.module.css';
 
 export default function Fotos() {
@@ -26,21 +26,23 @@ export default function Fotos() {
 
   return (
     <div>
-      <h1>Fotos</h1>
-      <ul>
+      <div className={styles.hero}>
+        <h1 className={styles.fotosTitle}>Fotogalerie</h1>
+      </div>
+      <ul className={styles.galerie}>
         {fotos.map((foto) => (
-          <li key={foto.fotoid}>
+          <li key={foto.fotoid} className={styles.foto}>
             <Link href={`/fotos/${foto.fotoid}`}>
-              
-                <img src={foto.bildurl} alt={`Foto ${foto.fotoid}`} width={300} height={200} />
-              
+              <img src={foto.bildurl} alt={`Foto ${foto.fotoid}`} width={300} height={200} />
             </Link>
-            <p>{foto.titel}</p>
+            <p className={styles.titel}>{foto.titel}</p>
           </li>
         ))}
       </ul>
+      {/* Füge die Navbar hier im Footer ein */}
+      <footer>
+        <Navbar />
+      </footer>
     </div>
   );
 }
-
-

@@ -1,0 +1,51 @@
+/* In FotoDetail.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-image: url('/images/sportplatz.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black; /* Schriftfarbe auf Schwarz ändern */
+  }
+  
+  .container2 {
+    max-width: 800px;
+    margin: 10px 0; /* Verringere den oberen und unteren Abstand */
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .container2 img {
+    width: 100%; /* Hier kannst du die Breite des Bildes nach Bedarf anpassen */
+    max-height: 400px; /* Maximale Höhe des Bildes, um es nicht zu groß werden zu lassen */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 5px; /* Verringere den Abstand nach unten */
+    color: black; /* Textfarbe auf Schwarz ändern */
+  }
+  
+  .description {
+    font-size: 1.4rem; /* Erhöhe die Schriftgröße, um die Beschreibung hervorzuheben */
+    margin-bottom: 10px; /* Verringere den Abstand nach unten */
+    color: black; /* Textfarbe auf Schwarz ändern */
+  }
+  
+  .dateinfo {
+    font-size: 1rem;
+    color: #777;
+    display: flex; /* Anzeigen in einer Zeile */
+    justify-content: space-between; /* Platz zwischen den Elementen */
+    margin-top: 10px; /* Abstand nach oben hinzufügen */
+    color: black; /* Textfarbe auf Schwarz ändern */
+  }
+  

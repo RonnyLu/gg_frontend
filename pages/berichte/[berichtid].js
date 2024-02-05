@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Navbar from '../../components/Navbar'; // Importiere die Navbar-Komponente
+import styles from '../../styles/BerichtDetail.module.css';
 
 export default function BerichtDetail() {
   const [berichtDetail, setBerichtDetail] = useState(null);
@@ -8,7 +10,6 @@ export default function BerichtDetail() {
 
   useEffect(() => {
     if (berichtid) {
-      console.log('Bericht ID:', berichtid); // Überprüfen Sie die ausgegebene Bericht-ID
       fetch(`http://localhost:8000/berichte/${berichtid}`)
         .then(response => {
           if (!response.ok) {
@@ -17,8 +18,6 @@ export default function BerichtDetail() {
           return response.json();
         })
         .then(data => {
-          console.log('Bericht Detail Daten:', data); // Überprüfen Sie die erhaltenen Daten
-
           // Extrahieren Sie die Datenfelder, die Sie benötigen
           const [berichtid, titel, gegner, ergebnis, ort, inhalt, spieldatum, erstelltam, erstelltvon] = data;
 
@@ -37,23 +36,27 @@ export default function BerichtDetail() {
         .catch(error => console.error('Fehler:', error));
     }
   }, [berichtid]);
-  
 
   if (!berichtDetail) {
     return <div>Lädt...</div>;
   }
 
   return (
-    <div>
-      <h1>{berichtDetail.berichtid}</h1>
-      <p>Titel: {berichtDetail.titel}</p>
-      <p>Gegner: {berichtDetail.gegner}</p>
-      <p>Ergebnis: {berichtDetail.ergebnis}</p>
-      <p>Ort: {berichtDetail.ort}</p>
-      <p>Inhalt: {berichtDetail.inhalt}</p>
-      <p>Spieldatum: {berichtDetail.spieldatum}</p>
-      <p>Erstellt am: {berichtDetail.erstelltam}</p>
-      <p>Erstellt von: {berichtDetail.erstelltvon}</p>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <h1>Titel: {berichtDetail.titel}</h1>
+        <p>Gegner: {berichtDetail.gegner}</p>
+        <p>Ergebnis: {berichtDetail.ergebnis}</p>
+        <p>Ort: {berichtDetail.ort}</p>
+        <p>Inhalt: {berichtDetail.inhalt}</p>
+        <p>Spieldatum: {berichtDetail.spieldatum}</p>
+        <p>Erstellt am: {berichtDetail.erstelltam}</p>
+        <p>Erstellt von: {berichtDetail.erstelltvon}</p>
+      </div>
+      {/* Füge die Navbar hier im Footer ein */}
+      <footer>
+        <Navbar />
+      </footer>
     </div>
   );
 }

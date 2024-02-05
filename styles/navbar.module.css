@@ -1,0 +1,18 @@
+/* In navbar.module.css */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 10px 0;
+  }
+  
+  .ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  
+  .li {
+    margin: 0 10px;
+  }
+  

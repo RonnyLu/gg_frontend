@@ -1,5 +1,32 @@
-.kleines-bild {
-    width: 200px; /* Ändere die Breite nach Bedarf */
-    height: auto; /* Automatische Anpassung der Höhe */
-  }
-  
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  border: 30px solid red;
+  padding: 10px;
+  justify-content: center;
+}
+
+.foto {
+  margin: 10px;
+  max-width: 300px; /* Breite eines einzelnen Bildes */
+}
+
+/* Fotos.module.css */
+.titel {
+  text-align: center; /* Titel zentrieren */
+}
+
+/* Fotos.module.css */
+.fotosTitle {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Textschatten hinzufügen */
+  color: white; /* Textfarbe auf Weiß setzen */
+  text-align: center; /* Text zentrieren */
+  background-color: rgba(0, 0, 0, 0.5); /* Hintergrundfarbe hinzufügen */
+  padding: 1rem;
+  border-radius: 10px;
+}

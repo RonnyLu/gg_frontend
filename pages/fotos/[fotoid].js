@@ -1,6 +1,7 @@
-// pages/fotos/[fotoid].js
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Navbar from '../../components/Navbar'; // Importiere die Navbar-Komponente
+import styles from '../../styles/FotoDetail.module.css';
 
 export default function FotoDetail() {
   const [fotoDetail, setFotoDetail] = useState(null);
@@ -38,13 +39,18 @@ export default function FotoDetail() {
   }
 
   return (
-    <div>
-      <h1>Titel: {fotoDetail.titel}</h1>
-      <img src={fotoDetail.bildurl} alt={`Foto ${fotoid}`} width={800} height={400}/>
-      <p>Beschreibung: {fotoDetail.beschreibung}</p>
-      <p>Hochgeladen am: {fotoDetail.hochgeladenam}</p>
-      <p>Hochgeladen von: {fotoDetail.hochgeladenvon}</p>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Titel: {fotoDetail.titel}</h1>
+      <div className={styles.container2}>
+        <img src={fotoDetail.bildurl} alt={`Foto ${fotoid}`} />
+      </div>
+      <p className={styles.description}>Beschreibung: {fotoDetail.beschreibung}</p>
+      <p className={styles.dateinfo}>Hochgeladen am: {fotoDetail.hochgeladenam}</p>
+      <p className={styles.dateinfo}>Hochgeladen von: {fotoDetail.hochgeladenvon}</p>
+      {/* Füge die Navbar hier im Footer ein */}
+      <footer>
+        <Navbar />
+      </footer>
     </div>
   );
 }
-
