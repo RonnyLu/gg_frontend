@@ -24,7 +24,7 @@ export default function Home() {
         <p className={styles.description}>Muss ich noch überlegen</p>
         
         {/* Hier müsstest du dein Logo einfügen */}
-        <img src="/path_to_your_logo.svg" alt="TSV Gaildorf Logo" className={styles.logo} />
+        <img src="/images/TSVLogo1.svg" alt="TSV Gaildorf Logo" className={styles.logo} width={300} height={200} />
 
         {/* Navigationsbuttons */}
         <div className={styles.grid}>
