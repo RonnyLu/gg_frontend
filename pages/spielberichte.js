@@ -9,7 +9,7 @@ export default function Spielberichte() {
   useEffect(() => {
     const fetchSpielberichte = async () => {
       try {
-        const response = await fetch('http://localhost:8000/berichte');
+        const response = await fetch('http://13.53.79.151/berichte');
         if (response.ok) {
           const data = await response.json();
           setSpielberichte(data);

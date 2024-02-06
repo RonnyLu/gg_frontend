@@ -10,7 +10,7 @@ export default function BerichtDetail() {
 
   useEffect(() => {
     if (berichtid) {
-      fetch(`http://localhost:8000/berichte/${berichtid}`)
+      fetch(`http://13.53.79.151/berichte/${berichtid}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Bericht nicht gefunden');

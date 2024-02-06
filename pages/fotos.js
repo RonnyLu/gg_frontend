@@ -9,7 +9,7 @@ export default function Fotos() {
   useEffect(() => {
     const fetchFotos = async () => {
       try {
-        const response = await fetch('http://localhost:8000/fotos');
+        const response = await fetch('http://13.53.79.151/fotos');
         if (response.ok) {
           const data = await response.json();
           setFotos(data);
