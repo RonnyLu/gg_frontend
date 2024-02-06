@@ -10,7 +10,7 @@ export default function FotoDetail() {
 
   useEffect(() => {
     if (fotoid) {
-      fetch(`http://13.53.79.151/fotos/${fotoid}`)
+      fetch(`https://13.53.79.151/fotos/${fotoid}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Foto nicht gefunden');
