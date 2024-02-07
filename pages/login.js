@@ -24,7 +24,7 @@ export default function Login() {
         localStorage.setItem('access_token', accessToken);
 
         // Navigiere zur gewünschten Seite (z.B., Dashboard)
-        router.push('/'); // Passe den Pfad an
+        router.push('/'); 
 
       } else {
         console.error('Fehler beim Einloggen');

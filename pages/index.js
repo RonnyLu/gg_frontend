@@ -1,4 +1,4 @@
-// index.js
+
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
@@ -7,11 +7,11 @@ import { useRouter } from 'next/router';
 export default function Home() {
   const router = useRouter();
 
-  // Navigation-Handler
+  
   const handleSpielberichteClick = () => {
     router.push('/berichte');
   };
-  // Navigation-Handler für Fotos
+  
   const handleFotosClick = () => {
     router.push('/fotos');
   };

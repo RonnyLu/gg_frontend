@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Navbar from '../components/Navbar'; // Importiere die Navbar-Komponente
+import Navbar from '../components/Navbar'; 
 import styles from '../styles/Spielberichte.module.css';
 
 export default function Spielberichte() {
@@ -61,7 +61,7 @@ export default function Spielberichte() {
           ))}
         </ul>
       </div>
-      {/* Füge die Navbar hier im Footer ein */}
+     
       <footer>
         <Navbar />
       </footer>

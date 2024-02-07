@@ -18,7 +18,7 @@ export default function BerichtDetail() {
           return response.json();
         })
         .then(data => {
-          // Extrahieren Sie die Datenfelder, die Sie benötigen
+          
           const [berichtid, titel, gegner, ergebnis, ort, inhalt, spieldatum, erstelltam, erstelltvon] = data;
 
           setBerichtDetail({
@@ -53,7 +53,7 @@ export default function BerichtDetail() {
         <p>Erstellt am: {berichtDetail.erstelltam}</p>
         <p>Erstellt von: {berichtDetail.erstelltvon}</p>
       </div>
-      {/* Füge die Navbar hier im Footer ein */}
+      
       <footer>
         <Navbar />
       </footer>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Navbar from '../components/Navbar'; // Importiere die Navbar-Komponente
+import Navbar from '../components/Navbar'; 
 import styles from '../styles/Fotos.module.css';
 
 export default function Fotos() {
@@ -39,7 +39,7 @@ export default function Fotos() {
           </li>
         ))}
       </ul>
-      {/* Füge die Navbar hier im Footer ein */}
+      
       <footer>
         <Navbar />
       </footer>

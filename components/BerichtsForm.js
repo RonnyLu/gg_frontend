@@ -21,12 +21,11 @@ export default function ErstelleBericht() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Hier kannst du die Logik zur Übermittlung des Berichts an dein Backend implementieren
-    // Verwende das 'bericht'-Objekt, um die Formulardaten zu übergeben
+    
     
     console.log('Berichtdaten:', bericht);
 
-    // Nach erfolgreicher Übermittlung kannst du den Benutzer weiterleiten
+    
   };
 
   return (

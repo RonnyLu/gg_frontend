@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Navbar from '../../components/Navbar'; // Importiere die Navbar-Komponente
+import Navbar from '../../components/Navbar'; 
 import styles from '../../styles/FotoDetail.module.css';
 
 export default function FotoDetail() {
@@ -18,7 +18,7 @@ export default function FotoDetail() {
           return response.json();
         })
         .then((data) => {
-          // Extrahieren Sie die Datenfelder, die Sie benötigen
+          
           const [fotoid, titel, beschreibung, bildurl, hochgeladenam, hochgeladenvon] = data;
 
           setFotoDetail({
@@ -47,7 +47,7 @@ export default function FotoDetail() {
       <p className={styles.description}>Beschreibung: {fotoDetail.beschreibung}</p>
       <p className={styles.dateinfo}>Hochgeladen am: {fotoDetail.hochgeladenam}</p>
       <p className={styles.dateinfo}>Hochgeladen von: {fotoDetail.hochgeladenvon}</p>
-      {/* Füge die Navbar hier im Footer ein */}
+      
       <footer>
         <Navbar />
       </footer>
