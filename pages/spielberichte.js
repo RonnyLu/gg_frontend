@@ -31,7 +31,7 @@ export default function Spielberichte() {
     widgetScript.src = 'https://www.fussball.de/static/layout/fbde2/egm//js/widget2.js';
     widgetScript.async = true;
     widgetScript.onload = () => {
-      new fussballdeWidgetAPI().showWidget('widget1', '02OGV05O04000000VUM1DNRAVUSCF6TO');
+      new fussballdeWidgetAPI().showWidget('widget1', '02OHGB749G000000VUM1DNP9VV2TPJAE');
     };
 
     document.body.appendChild(widgetScript);
